@@ -78,35 +78,38 @@ contains all saved .pkl file which are accountable for predicting new user's mov
 Code Running Instructions:
 first your pc needs to have make installed. To install make, you need to install choco also.
 
+# must install poetry. use this command to install poetry in you powershel in windows (run as admin)
+    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
+
 1. Install choco + make:
-    # Open powershell as admin
-    # Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    # run the upper command to install choco.
-    # verify by using command "choco --version"
-    # choco install make
+    i. Open powershell as admin
+    ii. Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    iii. run the upper command to install choco.
+    iv. verify by using command "choco --version"
+    v. choco install make
 
 2. To run model 1:
-    # open the full project movie_recommendation_system in vscode
-    # make sure you are in root folder like this "C:\Users\X\Desktop\movie_recommendation_system"
-    # Open Terminal from top navigation bar
-    # insert command: make
+    i. open the full project movie_recommendation_system in vscode
+    ii. make sure you are in root folder like this "C:\Users\X\Desktop\movie_recommendation_system"
+    iii. Open Terminal from top navigation bar
+    iv. insert command: make
 
 3. To run model 2:
-    # follow first 3 rule from (to run model 1)
-    # insert command : make svd
+    i. follow first 3 rule from (to run model 1)
+    ii. insert command : make svd
 
 4. To run model 3:
-    # follow first 3 rule from (to run model 1)
-    # insert command : make nmf
+    i. follow first 3 rule from (to run model 1)
+    ii. insert command : make nmf
 
 5. to just build and see the evaluation result of model 1:
-    # follow first 3 rule from (to run model 1)
-    # insert command : make build
+    i. follow first 3 rule from (to run model 1)
+    ii. insert command : make build
 
 6. to just build and see the evaluation result of model 2:
-    # follow first 3 rule from (to run model 1)
-    # insert command : make build_svd
+    i. follow first 3 rule from (to run model 1)
+    ii. insert command : make build_svd
 
 7. to just build and see the evaluation result of model 3:
-    # follow first 3 rule from (to run model 1)
-    # insert command : make nmf_builder
+    i. follow first 3 rule from (to run model 1)
+    ii. insert command : make nmf_builder
