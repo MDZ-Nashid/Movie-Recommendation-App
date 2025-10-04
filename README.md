@@ -88,28 +88,28 @@ first your pc needs to have make installed. To install make, you need to install
     c. verify by using command "choco --version"
     d. choco install make
 
-2. To run model 1:
+3. To run model 1:
     i. open the full project movie_recommendation_system in vscode
     ii. make sure you are in root folder like this "C:\Users\X\Desktop\movie_recommendation_system"
     iii. Open Terminal from top navigation bar
     iv. insert command: make
 
-3. To run model 2:
+4. To run model 2:
     i. follow first 3 rule from (to run model 1)
     ii. insert command : make svd
 
-4. To run model 3:
+5. To run model 3:
     i. follow first 3 rule from (to run model 1)
     ii. insert command : make nmf
 
-5. to just build and see the evaluation result of model 1:
+6. to just build and see the evaluation result of model 1:
     i. follow first 3 rule from (to run model 1)
     ii. insert command : make build
 
-6. to just build and see the evaluation result of model 2:
+7. to just build and see the evaluation result of model 2:
     i. follow first 3 rule from (to run model 1)
     ii. insert command : make build_svd
 
-7. to just build and see the evaluation result of model 3:
+8. to just build and see the evaluation result of model 3:
     i. follow first 3 rule from (to run model 1)
     ii. insert command : make nmf_builder
