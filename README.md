@@ -82,11 +82,11 @@ first your pc needs to have make installed. To install make, you need to install
     (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | python -
 
 1. Install choco + make:
-    i. Open powershell as admin
-    ii. Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
-    iii. run the upper command to install choco.
-    iv. verify by using command "choco --version"
-    v. choco install make
+    a. Open powershell as admin
+    Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+    b. run the upper command to install choco.
+    c. verify by using command "choco --version"
+    d. choco install make
 
 2. To run model 1:
     i. open the full project movie_recommendation_system in vscode
