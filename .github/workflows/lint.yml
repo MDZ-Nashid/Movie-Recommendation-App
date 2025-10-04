@@ -1,0 +1,22 @@
+name: Apartment Rent Prediction App
+
+on:
+  push:
+    branches: ['main']
+  pull_request: 
+    branches: ['main']
+
+permissions:
+  contents: read
+
+jobs:
+
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout repository
+      uses: actions/checkout@v5
+
+    - name: build Application
+      uses: ./.github/actions/build_application

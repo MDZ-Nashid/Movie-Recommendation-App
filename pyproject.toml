@@ -1,0 +1,31 @@
+[project]
+name = "movie-recommendation-system"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Md Zunaine Nashid",email = "zunainenashid@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pandas (>=2.3.3,<3.0.0)",
+    "pydantic (>=2.11.9,<3.0.0)",
+    "pydantic-settings (>=2.11.0,<3.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)",
+    "scikit-surprise (>=1.1.4,<2.0.0)",
+    "numpy (<2)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+priority = "explicit"
+
+[tool.poetry.dependencies]
+torchvision = {version = "^0.21.0", source = "pytorch-cu124"}
+torchaudio = {version = "^2.6.0", source = "pytorch-cu124"}

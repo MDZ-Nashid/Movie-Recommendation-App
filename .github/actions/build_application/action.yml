@@ -1,0 +1,33 @@
+name: Build Application
+
+
+runs:
+
+  using: composite
+
+  steps:
+  - name: checkout repository
+    uses: actions/checkout@v5
+
+  - name: setup python 3.12.7
+    uses: actions/setup-python@v6
+    with:
+      python-version: 3.12.7
+
+  - name: poetry setup
+    uses: snok/install-poetry@v1
+    with:
+      virtualenvs-in-project: true
+
+  - name: cache loading
+    uses: actions/cache@v4
+    id : cache-dependencies
+    with:
+      path: .venv
+      key: venv-${{ runner.os }}-${{ hashFiles('**/poetry.lock') }}
+
+  - name: Install dependencies
+    if: steps.cache-dependencies.outputs.cache-hit != 'true'
+    run: poetry run make install
+    shell: bash
+
